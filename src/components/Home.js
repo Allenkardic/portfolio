@@ -2,12 +2,12 @@
 
 import React from "react";
 
-const Navbar = () => {
+const Home = () => {
   return (
     <div>
-      <div>hello world</div>
+      <div>Home</div>
     </div>
   );
 };
 
-export default Navbar;
+export default Home;

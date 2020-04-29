@@ -2,12 +2,11 @@
 
 import React from "react";
 
-const Navbar = () => {
+function Notfound() {
   return (
     <div>
-      <div>hello world</div>
+      <div>not found</div>
     </div>
   );
-};
-
-export default Navbar;
+}
+export default Notfound;

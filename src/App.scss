@@ -1,9 +1,44 @@
 /** @format */
-$color: rgb(24, 24, 240);
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab");
+$color: (
+  primary: "#138750",
+  secondary: "#011429",
+  tertiary: rgb(41, 41, 235)
+);
+$fontWeight: (
+  bold: 700,
+  medium: 600,
+  regular: 400,
+  light: 300
+);
+$fontSize: (
+  xxsmall: 8px,
+  xsmall: 10px,
+  small: 12px,
+  medium: 14px,
+  large: 16px,
+  xlarge: 18px,
+  xxlarge: 20px,
+  title: 28px
+);
+$boxShadow: (
+  card: "0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,.15)"
+);
 
-body {
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Josefin Slab", serif;
   overflow: hidden;
-  color: $color;
+  font-size: map-get($fontSize, large);
+  font-weight: map-get($fontWeight, light);
+  color: map-get($color, tertiary);
+}
+
+p {
+  font-weight: lighter;
 }
