@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Slab");
 $color: (
   primary: "#138750",
-  secondary: "#011429",
+  white: white,
+  black: black,
   tertiary: rgb(41, 41, 235)
 );
 $fontWeight: (
@@ -22,7 +23,7 @@ $fontSize: (
   title: 28px
 );
 $boxShadow: (
-  card: "0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,.15)"
+  card: 1px 1px 10px 1px rgb(148, 146, 146)
 );
 
 * {
@@ -36,9 +37,209 @@ body {
   overflow: hidden;
   font-size: map-get($fontSize, large);
   font-weight: map-get($fontWeight, light);
-  color: map-get($color, tertiary);
+  color: map-get($color, black);
 }
 
-p {
-  font-weight: lighter;
+.header {
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 0,
+    100% 92%,
+    70% 96%,
+    29% 96%,
+    0 100%,
+    0 0
+  );
+
+  height: 80vh;
+  background: rgb(0, 2, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 2, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(0, 212, 255, 1) 90%
+  );
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 30vh;
+  color: map-get($color, white);
+}
+
+.header-items {
+  font-size: map-get($fontSize, xlarge);
+  font-weight: map-get($fontWeight, normal);
+  padding: 5px 0;
+}
+.name {
+  font-size: map-get($fontSize, title);
+  font-weight: map-get($fontWeight, bold);
+}
+
+.view-projects {
+  margin: 110px auto 0 auto;
+  z-index: 2;
+  width: 120px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid white;
+  padding: 15px;
+  border-radius: 20px;
+  color: map-get($color, white);
+  font-weight: map-get($fontWeight, medium);
+  cursor: pointer;
+  transition: 0.7s;
+  transition-timing-function: ease-in-out;
+  scroll-behavior: smooth;
+}
+
+.view-projects:hover {
+  box-shadow: map-get($boxShadow, card);
+}
+
+.projects {
+  display: none;
+  text-align: center;
+  margin-top: 50px;
+  transition-timing-function: ease-in-out;
+}
+
+.myworks {
+  font-size: map-get($fontSize, title);
+  font-weight: map-get($fontWeight, bold);
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 40px auto;
+  width: 90%;
+}
+
+.cards {
+  margin: 20px 0;
+  width: 300px;
+  height: 450px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: map-get($color, secondary);
+  box-shadow: map-get($boxShadow, card);
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-image {
+  align-self: center;
+  width: 100%;
+  height: 250px;
+}
+
+.content {
+  padding: 20px 15px;
+  text-align: justify;
+}
+
+.title {
+  text-align: center;
+  font-weight: map-get($fontWeight, bold);
+  font-size: map-get($fontSize, xlarge);
+}
+
+.description {
+  font-weight: map-get($fontWeight, regular);
+  padding: 40px 0;
+}
+
+.reference {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reference-items {
+  text-decoration: none;
+  color: map-get($color, black);
+  border-bottom: 1px solid black;
+}
+
+.reference-items:hover {
+  color: map-get($color, tertiary);
+  border-bottom: 1px solid blue;
+}
+
+.contact {
+  clip-path: polygon(
+    73% 17%,
+    100% 0,
+    100% 35%,
+    100% 70%,
+    100% 100%,
+    50% 100%,
+    20% 100%,
+    0 100%,
+    0 33%,
+    30% 17%
+  );
+  background-color: rgb(0, 212, 255);
+  height: 20vh;
+}
+
+.contact-me {
+  margin: 80px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.contact-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ref {
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  padding-right: 5px;
+  padding-bottom: 1px;
+  font-size: map-get($fontSize, medium);
+  font-weight: map-get($fontWeight, medium);
+  margin: 0 10px;
+  cursor: pointer;
+  color: map-get($color, tertiary);
+}
+.ref:hover {
+  color: map-get($color, white);
+  border-bottom: 1px solid white;
+}
+
+@media screen and (max-width: "370px") {
+  .view-projects {
+    margin: 70px auto 0 auto;
+    z-index: 2;
+    width: 120px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 20px;
+    color: map-get($color, white);
+    font-weight: map-get($fontWeight, medium);
+    cursor: pointer;
+    transition: 0.7s;
+    transition-timing-function: ease-in-out;
+    scroll-behavior: smooth;
+  }
+
+  .contact-me {
+    margin: 60px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
