@@ -217,6 +217,39 @@ body {
   border-bottom: 1px solid white;
 }
 
+.error-page {
+  text-align: center;
+  margin-top: 20vh;
+  color: map-get($color, black);
+}
+
+.error-page > div {
+  padding: 5px;
+  font-size: map-get($fontSize, title);
+  font-weight: map-get($fontWeight, bold);
+}
+.btn-error {
+  color: map-get($color, tertiary);
+  margin: 40px auto 0 auto;
+  z-index: 2;
+  width: 120px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid blue;
+  padding: 15px;
+  border-radius: 20px;
+  font-weight: map-get($fontWeight, medium);
+  cursor: pointer;
+  transition: 0.7s;
+  transition-timing-function: ease-in-out;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+.btn-error:hover {
+  box-shadow: map-get($boxShadow, card);
+}
+
 @media screen and (max-width: "370px") {
   .view-projects {
     margin: 70px auto 0 auto;
