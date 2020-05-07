@@ -18,11 +18,9 @@ const Home = () => {
     let newToggle = toggle;
     if (newToggle === true) {
       project.style.cssText = "display:block";
-      console.log("truuee");
     } else {
       project.style.cssText =
         "display:none; scroll-behavior: smooth;  transition: 0.7s; transition-timing-function: ease-in-out;";
-      console.log("falsess");
     }
   }
   return (
@@ -57,8 +55,8 @@ const Home = () => {
             <div className="content">
               <div className="title">Find Art</div>
               <div className="description">
-                This is an art work auction app. Users can sell artwork or bid
-                for artwork
+                This is an art work auction app. Users can sell and bid for
+                artwork
               </div>
 
               <div className="reference">
@@ -132,7 +130,7 @@ const Home = () => {
           <div className="cards ">
             <img src={todolist} alt="project" className="cards-image" />
             <div className="content">
-              <div className="title">Todos managers</div>
+              <div className="title">Todos manager</div>
               <div className="description">
                 A todo list application. manages schedules based on time
               </div>
@@ -184,7 +182,7 @@ const Home = () => {
               href="https://github.com/Allenkardic"
               target="_blank"
               rel="noopener noreferrer"
-              className="ref">
+              className="ref ref-github">
               github
             </a>
           </div>
