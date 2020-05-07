@@ -111,8 +111,8 @@ body {
 }
 
 .myworks {
-  font-size: map-get($fontSize, title);
-  font-weight: map-get($fontWeight, bold);
+  font-size: map-get($fontSize, medium);
+  font-weight: map-get($fontWeight, medium);
 }
 
 .box {
